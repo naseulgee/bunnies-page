@@ -27,5 +27,6 @@ dist-ssr
 *.sln
 *.sw?
 
+00_plan
 .idx/
 assets/css/tailwindcss.output.css

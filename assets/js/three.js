@@ -83,9 +83,9 @@ let startRotationX = cube.rotation.x // 시작할 때의 x축 회전값
 let startRotationY = cube.rotation.y // 시작할 때의 y축 회전값
 
 // 이벤트 리스너 추가
-window.addEventListener('mousedown', onDocumentMouseDown, false)
-window.addEventListener('mouseup', onDocumentMouseUp, false)
-window.addEventListener('mousemove', onDocumentMouseMove, false)
+renderTarget.addEventListener('mousedown', onDocumentMouseDown, false)
+renderTarget.addEventListener('mouseup', onDocumentMouseUp, false)
+renderTarget.addEventListener('mousemove', onDocumentMouseMove, false)
 
 /**
  * 마우스 클릭(드래그 시작) 시 드래그 상태를 변경하고 위치값을 저장하는 함수
