@@ -1,9 +1,10 @@
-
 # 🚍 홍대입구팀
 
-> ### “홍대 가려면 어떻게 가야 해요?”
-> ### “뉴진스의 하입보이요.”
+> “홍대 가려면 어떻게 가야 해요?”
 
+> “뉴진스의 하입보이요.”
+
+## 🤗 구성원 소개
 <table width="100%">
     <thead>
         <tr bgColor="#d3d3d3">
@@ -27,7 +28,7 @@
         <tr>
             <th bgColor="#f1f1f1"><a href="https://github.com/naseulgee" target="_blank">나슬기</a></th>
             <td>
-                공통 페이지 - 페이지별 마우스 커서 및 반응형<br>
+                공통 페이지 - 페이지별 마우스 커서 및 반응형
                 멤버 페이지 - 응원 메세지
             </td>
             <td>
@@ -66,9 +67,8 @@
     </tbody>
 </table>
 
-- [📢 작업 규칙 바로가기](https://github.com/ormcamp-fe-3rd/bunnies-page/wiki/%F0%9F%93%8C-%EA%B7%9C%EC%B9%99)
-- [📆 일정 및 회의록 바로가기](https://github.com/ormcamp-fe-3rd/bunnies-page/wiki/%F0%9F%97%82%EF%B8%8F-%EC%9D%BC%EC%A0%95-%EB%B0%8F-%ED%9A%8C%EC%9D%98%EB%A1%9D)
-- [📝 프로젝트 회고 바로가기](https://github.com/ormcamp-fe-3rd/bunnies-page/wiki/%E2%9C%92-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0)
+### [📌 팀 컨벤션](https://github.com/naseulgee/bunnies-page/wiki/📌-팀-컨벤션)
+### [🗂️ 일정 및 회의록](https://github.com/naseulgee/bunnies-page/wiki/🗂️-일정-및-회의록)
 
 ***
 
@@ -76,26 +76,26 @@
 
 <img src="https://github.com/user-attachments/assets/aabc1f41-282d-4094-8e9f-33bb6f6330a9" alt="홍대입구팀 버니즈페이지" width="100%">
 
-- 24.11.01 ~ 11.11
+- `24.11.01` ~ `11.11`
 - 아이돌 뉴진스에 처음 입덕하는 사람들을 위한 뉴진스 소개 페이지
 
-### 사용언어 및 개발 환경
+**사용언어 및 개발 환경**
 
 <img alt="Html5" src ="https://img.shields.io/badge/HTML-E34F26?&style=for-the-badge&logo=HTML5&logoColor=white"/> <img alt="Css" src ="https://img.shields.io/badge/CSS3-1572B6?&style=for-the-badge&logo=CSS3&logoColor=white"/> <img alt="Tailwindcss" src ="https://img.shields.io/badge/Tailwindcss-0EA5E9?&style=for-the-badge&logo=Tailwindcss&logoColor=white"/> <img alt="Javascript" src ="https://img.shields.io/badge/JavaScript-F7DF1E?&style=for-the-badge&logo=JavaScript&logoColor=black"/>
 
 ## 🎯 프로젝트 목적
-- ✅ tailwindcss 에 대한 복습과 활용
-- ✅ Three.js 에 대한 복습과 활용
-- ✅ 로컬 스토리지에 대한 학습과 활용
-- ✅ 랜덤 함수에 대한 학습과 활용
-- ✅ 마우스 이벤트에 대한 학습과 활용
+- ✔ tailwindcss 에 대한 복습과 활용
+- ✔ Three.js 에 대한 복습과 활용
+- ✔ 로컬 스토리지에 대한 학습과 활용
+- ✔ 랜덤 함수에 대한 학습과 활용
+- ✔ 마우스 이벤트에 대한 학습과 활용
 
 ## 🎨 프로젝트 기획 및 디자인
 > <a href="https://www.figma.com/design/29z26BrU5SFZxm4dewg4MR/%EA%B8%B0%ED%9A%8D-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%BD%94%EB%94%A9?node-id=1-3&node-type=canvas&t=uBWqhd91vJqRlizD-0" target="_blank">Figma 바로가기</a>
 
 <img src="https://github.com/user-attachments/assets/6d4b17ad-a2d3-435d-a21b-818cb4b23f13" alt="디자인 시안" width="100%">
 
-### 기획 의도
+**기획 의도**
 - K-POP 인기상승에 따라 아이돌 웹사이트에 대한 투자와 관심 증가에 대한 대응
 - 채널에 따른 다양한 정보를 한눈에 볼 수 있는 통로 필요
 - 아이돌에 처음 입덕하는 사람도 부담없이 접근 가능한 사이트로 활용
@@ -173,3 +173,11 @@
     </tbody>
 </table>
 
+## 🎉 마치며
+### [✒ 프로젝트 회고](https://github.com/naseulgee/bunnies-page/wiki/✒-프로젝트-회고)
+- [😱 프로젝트를 진행하며 어려웠던 점](https://github.com/naseulgee/bunnies-page/wiki/✒-프로젝트-회고#-프로젝트를-진행하며-어려웠던-점)
+- [🤔 소감](https://github.com/naseulgee/bunnies-page/wiki/✒-프로젝트-회고#-프로젝트를-마치며)
+### [🎪 프로젝트 마무리](https://github.com/naseulgee/bunnies-page/wiki/🎪-프로젝트-마무리)
+- [📊 기여도](https://github.com/naseulgee/bunnies-page/wiki/🎪-프로젝트-마무리#-기여도)
+- [📽 프로젝트 발표 PPT](https://github.com/naseulgee/bunnies-page/wiki/🎪-프로젝트-마무리#-프로젝트-발표-ppt)
+- [🏆 성과](https://github.com/naseulgee/bunnies-page/wiki/🎪-프로젝트-마무리#-성과)
