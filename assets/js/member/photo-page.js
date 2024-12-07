@@ -98,7 +98,7 @@ function togglePage(index) {
  * @param {number} index 페이징 순서
  */
 function togglePaging(index) {
-  const pagingImg = '/assets/images/member/photo-page-'
+  const pagingImg = './assets/images/member/photo-page-'
   pagingBtns.forEach(btn => (btn.querySelector('img').src = pagingImg + 'none.png'))
   pagingBtns[index].querySelector('img').src = pagingImg + (index + 1) + '.png'
 }

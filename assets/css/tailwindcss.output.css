@@ -2229,6 +2229,22 @@ a,
   cursor: url('/assets/images/common/cursor/rounded.png'), default;
 }
 
+.cursor-\[url\(\'\.\/assets\/images\/common\/cursor\/korean\.png\'\)\2c _default\] {
+  cursor: url('./assets/images/common/cursor/korean.png'), default;
+}
+
+.cursor-\[url\(\'\.\.\/\.\.\/assets\/images\/common\/cursor\/korean\.png\'\)\2c _default\] {
+  cursor: url('../../assets/images/common/cursor/korean.png'), default;
+}
+
+.cursor-\[url\(\'\.\.\/images\/common\/cursor\/bunnie\.png\'\)\2c _default\] {
+  cursor: url('../images/common/cursor/bunnie.png'), default;
+}
+
+.cursor-\[url\(\'\.\.\/images\/common\/cursor\/rounded\.png\'\)\2c _default\] {
+  cursor: url('../images/common/cursor/rounded.png'), default;
+}
+
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
@@ -2598,6 +2614,14 @@ a,
 
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\'\.\/assets\/images\/album\/pc-outside-background\.jpg\'\)\] {
+  background-image: url('./assets/images/album/pc-outside-background.jpg');
+}
+
+.bg-\[url\(\'\.\.\/images\/album\/pc-outside-background\.jpg\'\)\] {
+  background-image: url('../images/album/pc-outside-background.jpg');
 }
 
 .from-\[\#94969a\] {

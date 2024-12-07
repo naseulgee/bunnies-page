@@ -4,7 +4,7 @@ import albumList from '/assets/json/albumList.json' with { type: 'json' }
 const modal = document.getElementById('modal')
 const closeModalBtn = document.getElementById('closeModalBtn')
 const modalBg = document.getElementById('modal-background')
-const cdImgFolder = '/assets/images/album/album_img/'
+const cdImgFolder = './assets/images/album/album_img/'
 
 window.addEventListener('load', () => {
   setAlbumIconList()

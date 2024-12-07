@@ -115,7 +115,7 @@ function render3DCover(index) {
 function setMeterials(index = 0) {
   // 앨범에 따른 이미지 저장 경로 세팅
   const coverFolderNm = albumList[index].coverFolder
-  const coverFolder = '/assets/images/album/3dTexture/' + coverFolderNm
+  const coverFolder = './assets/images/album/3dTexture/' + coverFolderNm
 
   // 이미지 불러와서 배열로 생성
   const textureLoader = new THREE.TextureLoader()

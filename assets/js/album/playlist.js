@@ -167,7 +167,7 @@ function setPlaylist(playlist) {
  * @param {string} audioName 곡 제목
  */
 function setAudio(audioName) {
-  audio.src = '/assets/audio/' + audioName.replaceAll(' ', '-') + '.mp3'
+  audio.src = './assets/audio/' + audioName.replaceAll(' ', '-') + '.mp3'
 }
 
 /**
