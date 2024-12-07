@@ -88,7 +88,7 @@ function togglePage(index) {
   pages[index].classList.remove('hidden')
   if (urlParams.get('member')) {
     let memberName = pages[index].className.split('-', 5)
-    history.replaceState(null, '', `/member.html?member=${memberName[4]}`)
+    history.replaceState(null, '', `./member.html?member=${memberName[4]}`)
   }
 }
 
