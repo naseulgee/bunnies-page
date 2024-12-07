@@ -7,8 +7,8 @@ const prevBtn = document.getElementById('preAlbum')
 const nextBtn = document.getElementById('nextAlbum')
 const cdWrap = document.querySelectorAll('.cd-wrap>img')
 const cdArr = Array.from(cdWrap)
-const pausedImg = 'assets/images/albums/paused-circle.png'
-const playImg = 'assets/images/albums/play-circle.png'
+const pausedImg = './assets/images/albums/paused-circle.png'
+const playImg = './assets/images/albums/play-circle.png'
 const audio = new Audio()
 
 //현재 앨범과 앨범 인덱스 변수 선언
