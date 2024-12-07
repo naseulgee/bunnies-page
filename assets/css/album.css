@@ -30,8 +30,8 @@
 }
 
 /*앨범 영수증 플레이리스트 버튼 호버시 효과*/
-.album_selct_btn:hover,
-.album_selct_btn.play {
+.album_select_btn:hover,
+.album_select_btn.play {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
 }

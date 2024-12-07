@@ -7,9 +7,16 @@
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/common/favicon.ico" />
     <link rel="stylesheet" href="./assets/css/tailwindcss.output.css" />
     <link rel="stylesheet" href="/assets/css/album.css" />
-    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
-    <script src="./assets/js/album-playlist.js" defer></script>
-    <script src="./assets/js/three.js" defer></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "/node_modules/three/build/three.module.min.js",
+          "Orbit": "/node_modules/three/examples/jsm/controls/OrbitControls.js"
+        }
+      }
+    </script>
+    <script type="module" src="/assets/js/album/playlist.js"></script>
+    <script type="module" src="/assets/js/album/three.js"></script>
   </head>
 
   <body class="cursor-[url('/assets/images/common/cursor/rounded.png'),_default] bg-zinc-950 text-white">
@@ -60,17 +67,17 @@
           <!--앨범 이동 btn 영역-->
           <ul class="album_player_btn mx-auto mt-14 flex w-72 items-center justify-between">
             <li>
-              <button id="preAlbum" onclick="changeAlbum('prev')">
+              <button id="preAlbum">
                 <img class="h-12 w-12" src="/assets/images/albums/previous.png" />
               </button>
             </li>
             <li>
-              <button id="playAlbum" class="album_player_play_btn" onclick="playAlbum()">
+              <button id="playAlbum" class="album_player_play_btn">
                 <img class="h-20 w-20" src="/assets/images/albums/play-circle.png" />
               </button>
             </li>
             <li>
-              <button id="nextAlbum" onclick="changeAlbum('next')">
+              <button id="nextAlbum">
                 <img class="h-12 w-12" src="/assets/images/albums/previous-1.png" />
               </button>
             </li>
@@ -95,9 +102,9 @@
               </div>
               <hr class="my-4 border-dashed border-black" />
               <!--## 영수증 플레이리스트 선택 영역-->
-              <ul id="album_selct">
+              <ul id="album_select">
                 <li>
-                  <button type="button" class="album_selct_btn play flex w-full" onclick="playMusic(this)">
+                  <button type="button" class="album_selct_btn play flex w-full">
                     <p class="mr-10">01</p>
                     <p class="name">ATTENTION</p>
                     <p class="ml-auto">3:00</p>

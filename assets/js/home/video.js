@@ -1,4 +1,4 @@
-const playList = [
+const youtubePlayList = [
   {
     id: 'ArmDp-zijuc',
     album: "NewJeans 2nd EP 'Get Up'",
@@ -15,6 +15,20 @@ const playList = [
     track: 'Attention'
   }
 ]
+const youtube = document.getElementById('youtube')
+const album = document.getElementById('album')
+const track = document.getElementById('track')
+const paging = document.getElementById('paging')
+const total = document.getElementById('total')
+const prev = document.getElementById('prev')
+const next = document.getElementById('next')
+
+window.addEventListener('load', () => {
+  setVideo()
+  prev.addEventListener('click', () => setVideo('prev'))
+  next.addEventListener('click', () => setVideo('next'))
+})
+
 /**
  * 유튜브 영상 세팅 함수
  *
@@ -25,14 +39,10 @@ function setVideo(direction) {
   if (!direction) currNum = 1
   if (direction == 'next') currNum++
   if (direction == 'prev') currNum--
-  const video = playList[currNum - 1]
+  const video = youtubePlayList[currNum - 1]
   const url = `https://www.youtube.com/embed/${video.id}?autoplay=1&loop=1&playlist=${video.id}`
-  console.log(url)
 
   // video 정보 세팅
-  const youtube = document.getElementById('youtube')
-  const album = document.getElementById('album')
-  const track = document.getElementById('track')
   youtube.src = url
   youtube.title = video.album
   album.innerText = video.album
@@ -48,24 +58,19 @@ function setVideo(direction) {
  * @param {number} num 현재 페이지 번호
  */
 function setVideoPaging(num = 1) {
-  const paging = document.getElementById('paging')
-  const total = document.getElementById('total')
-  const prev = document.getElementById('prev')
-  const next = document.getElementById('next')
-
   paging.innerText = num
-  total.innerText = playList.length
+  total.innerText = youtubePlayList.length
   // 버튼 비활성화 처리
   if (num == 1) {
-    prev.disabled
+    prev.disabled = true
     prev.style.opacity = 0.2
     prev.style.cursor = 'default'
   } else {
     prev.disabled = false
     prev.style = null
   }
-  if (num == playList.length) {
-    next.disabled
+  if (num == youtubePlayList.length) {
+    next.disabled = true
     next.style.opacity = 0.2
     next.style.cursor = 'default'
   } else {

@@ -1,11 +1,13 @@
+import { getRandomInt } from '/assets/js/common/random.js'
+
 const pages = document.querySelectorAll('.team-photo-page')
-const pagingBtns = document.querySelectorAll('.member-pagination ul li')
+const pagingBtns = document.querySelectorAll('.member-pagination div button')
 
 /**
  * member페이지 로드시마다 호출되는 함수
  */
 window.addEventListener('load', () => {
-  setPagingEvent()
+  addPagingClickEvent()
   setPagingByParam()
   setCardBtns()
   checkContentWidth()
@@ -27,7 +29,7 @@ function checkContentWidth(event) {
   const targetW = event?.target.innerWidth || document.documentElement.clientWidth
   const imgList = document.querySelectorAll('.team-photo')
   if (targetW < 1024) {
-    setPosition(imgList)
+    setPositionCenter(imgList)
   } else {
     resetPosition(imgList)
     runDrag()
@@ -39,13 +41,13 @@ function checkContentWidth(event) {
  *
  * @param {Array} targetList 위치를 변경시킬 대상 목록
  */
-function setPosition(targetList) {
+function setPositionCenter(targetList) {
   targetList.forEach(target => {
     const targetSizeW = target.clientWidth
     const targetSizeH = target.clientHeight
     target.style.top = `calc(50% - ${targetSizeH / 2}px)`
     target.style.left = `calc(50% - ${targetSizeW / 2}px)`
-    target.style.transform = `rotate(${Math.floor(Math.random() * 10 + 1)}deg)`
+    target.style.transform = `rotate(${getRandomInt(10, 1)}deg)`
     target.style.zIndex = ''
   })
 }
@@ -66,7 +68,7 @@ function resetPosition(targetList) {
 /**
  * 페이징 버튼에 클릭 이벤트를 추가하는 함수
  */
-function setPagingEvent() {
+function addPagingClickEvent() {
   pagingBtns.forEach((btn, index) => {
     btn.addEventListener('click', function () {
       togglePage(index)
@@ -84,6 +86,10 @@ function setPagingEvent() {
 function togglePage(index) {
   pages.forEach(page => page.classList.add('hidden'))
   pages[index].classList.remove('hidden')
+  if (urlParams.get('member')) {
+    let memberName = pages[index].className.split('-', 5)
+    history.replaceState(null, '', `/member.html?member=${memberName[4]}`)
+  }
 }
 
 /**
@@ -98,11 +104,29 @@ function togglePaging(index) {
 }
 
 /**
- * 파라미터에 멤버 번호가 있다면(메인에서 전달) 해당 멤버 갤러리를 보여주는 함수
+ * 파라미터에 멤버 번호가 있다면(메인에서 전달) 해당 멤버 페이지를 보여주는 함수
  */
-function setPagingByParam(){
-  const urlParams = new URL(location.href).searchParams
-  const index = urlParams.get('index') || 0
+const urlParams = new URL(location.href).searchParams
+function setPagingByParam() {
+  const paramName = urlParams.get('member') || 0
+  let index = 0
+  switch (paramName) {
+    case 'minji':
+      index = 0
+      break
+    case 'hanni':
+      index = 1
+      break
+    case 'danni':
+      index = 2
+      break
+    case 'haerin':
+      index = 3
+      break
+    case 'hyein':
+      index = 4
+      break
+  }
   pagingBtns[index].click()
 }
 

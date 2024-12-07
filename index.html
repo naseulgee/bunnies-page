@@ -6,17 +6,14 @@
     <title>Bunnies Page</title>
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/common/favicon.ico" />
     <link rel="stylesheet" href="/assets/css/tailwindcss.output.css" />
-    <link rel="stylesheet" href="/assets/css/member.css" />
-    <link rel="stylesheet" href="/assets/css/album.css" />
-    <script src="./assets/js/video.js"></script>
-    <script src="./assets/js/modal-popup.js" defer></script>
-    <script src="./assets/js/card-rotate.js" defer></script>
+    <script type="module" src="/assets/js/home/video.js"></script>
+    <script type="module" src="/assets/js/home/photoCard.js"></script>
+    <script type="module" src="./assets/js/home/albumIcons.js"></script>
   </head>
 
   <!-- ! 홈-메뉴-텍스트 및 아이콘 -->
   <body
-    class="cursor-[url('/assets/images/common/cursor/korean.png'),_default] overflow-x-hidden bg-zinc-950 text-white"
-    onload="rotateCards(); setVideo();">
+    class="cursor-[url('/assets/images/common/cursor/korean.png'),_default] overflow-x-hidden bg-zinc-950 text-white">
     <!-- s: 헤더 -->
     <header class="container mx-auto flex h-40 w-full flex-wrap items-center justify-between max-md:px-5">
       <nav class="flex flex-wrap justify-between font-cafe text-4xl max-md:w-full md:gap-20">
@@ -68,13 +65,13 @@
           </div>
         </div>
         <div class="flex items-center justify-between gap-4 font-cafe-fill">
-          <button type="button" id="prev" onclick="setVideo('prev')">&lt;</button>
+          <button type="button" id="prev">&lt;</button>
           <span>
             <span id="paging">1</span>
             <span class="opacity-70">/</span>
             <span id="total">1</span>
           </span>
-          <button type="button" id="next" onclick="setVideo('next')">&gt;</button>
+          <button type="button" id="next">&gt;</button>
         </div>
       </div>
       <!-- s: 홈-바디-텍스트 -->
@@ -86,7 +83,7 @@
       <ul
         class="member-card-box container mx-auto grid w-full grid-cols-5 gap-x-12 gap-y-6 px-5 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
         <li id="home-minji" class="relative w-full -rotate-12 overflow-hidden rounded">
-          <a href="/member.html?index=0">
+          <a href="/member.html?member=minji">
             <img src="/assets/images/main-member/main-minji.jpeg" class="aspect-[2/3] w-full" alt="" />
             <img
               src="/assets/images/main-member/main-minji-frame.png"
@@ -95,7 +92,7 @@
           </a>
         </li>
         <li id="home-hanni" class="relative w-full rotate-6 overflow-hidden rounded">
-          <a href="/member.html?index=1">
+          <a href="/member.html?member=hanni">
             <img src="/assets/images/main-member/main-hanni.jpeg" class="aspect-[2/3] w-full" alt="" />
             <img
               src="/assets/images/main-member/main-hanni-frame.png"
@@ -104,7 +101,7 @@
           </a>
         </li>
         <li id="home-danni" class="relative w-full -rotate-6 overflow-hidden rounded">
-          <a href="/member.html?index=2">
+          <a href="/member.html?member=danni">
             <img src="/assets/images/main-member/main-danielle.jpeg" class="aspect-[2/3] w-full" alt="" />
             <img
               src="/assets/images/main-member/main-danielle-frame.png"
@@ -113,7 +110,7 @@
           </a>
         </li>
         <li id="home-haerin" class="relative w-full rotate-12 overflow-hidden rounded">
-          <a href="/member.html?index=3">
+          <a href="/member.html?member=haerin">
             <img src="/assets/images/main-member/main-haerin.jpeg" class="aspect-[2/3] w-full" alt="" />
             <img
               src="/assets/images/main-member/main-haerin-frame.png"
@@ -122,7 +119,7 @@
           </a>
         </li>
         <li id="home-hyein" class="relative w-full -rotate-3 overflow-hidden rounded">
-          <a href="/member.html?index=4">
+          <a href="/member.html?member=hyein">
             <img src="/assets/images/main-member/main-hyein.jpeg" class="aspect-[2/3] w-full" alt="" />
             <img
               src="/assets/images/main-member/main-hyein-frame.png"
@@ -146,8 +143,7 @@
             class="flex aspect-video w-full flex-wrap items-start justify-start gap-11 overflow-y-auto rounded-t-3xl border-[30px] border-solid border-black bg-[url('/assets/images/album/pc-outside-background.jpg')] bg-cover bg-center bg-no-repeat p-10 text-center max-md:h-[500px] max-md:rounded-3xl max-md:p-2">
             <button
               type="button"
-              class="w-32 break-all rounded-md bg-opacity-30 p-2 transition duration-200 hover:bg-white hover:bg-opacity-30"
-              onclick="openModal(0)">
+              class="w-32 break-all rounded-md bg-opacity-30 p-2 transition duration-200 hover:bg-white hover:bg-opacity-30">
               <img
                 class="mx-auto my-2 aspect-square w-4/5 shadow-md shadow-zinc-700"
                 src="./assets/images/album/album_img/1stEP.jpg"
@@ -164,7 +160,7 @@
             class="absolute left-1/2 top-1/2 hidden h-4/5 w-4/5 max-w-3xl -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-md border border-solid border-zinc-400 shadow-lg">
             <div
               class="bar-wrap absolute left-0 top-0 z-20 w-full border-b border-b-zinc-400 bg-gradient-to-b from-zinc-200 to-zinc-300 py-1 text-center text-sm text-gray-100">
-              <button type="button" onclick="closeModal()" class="absolute left-3 top-1/2 -translate-y-1/2">
+              <button type="button" id="closeModalBtn" class="absolute left-3 top-1/2 -translate-y-1/2">
                 <span class="inline-block h-3 w-3 rounded-full bg-red-500 hover:bg-red-700"></span>
                 <span
                   class="ml-1 inline-block h-3 w-3 rounded-full bg-yellow-500 hover:bg-yellow-700 max-sm:hidden"></span>
@@ -252,10 +248,7 @@
       <!-- e: 컴퓨터 목업 -->
 
       <!-- 모달 배경 -->
-      <div
-        id="modal-background"
-        class="fixed inset-0 z-10 hidden bg-black bg-opacity-50 backdrop-blur-sm"
-        onclick="closeModal()"></div>
+      <div id="modal-background" class="fixed inset-0 z-10 hidden bg-black bg-opacity-50 backdrop-blur-sm"></div>
     </section>
 
     <!-- s: 풋터 -->

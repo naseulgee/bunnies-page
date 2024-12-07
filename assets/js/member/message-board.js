@@ -1,6 +1,11 @@
-const messageBtn = document.querySelector('#message')
+import { getRandomInt } from '/assets/js/common/random.js'
+
+const messageBtn = document.getElementById('message')
 const messageWrap = document.getElementById('message-wrap-list')
 
+window.addEventListener('load', () => {
+  messageBtn.addEventListener('keypress', e => messageInit(e))
+})
 /**
  * 메세지 입력 받아서 텍스트 저장
  *
@@ -15,7 +20,7 @@ function messageInit(e) {
     const newMessage = messageBtn.value
     messageBtn.value = ''
 
-    makeMessageDome(newMessage) //새로운 메세지 element 생성
+    makeMessageDom(newMessage) //새로운 메세지 element 생성
     limitMaxMessage(10) //메세지의 총 개수 조절
   }
 }
@@ -34,16 +39,16 @@ function limitMaxMessage(n) {
  *
  * @param {string} str 메세지창에서 입력받은 텍스트
  */
-function makeMessageDome(str) {
+function makeMessageDom(str) {
   let messageObj = {
     //메세지를 담아둘 객체 생성
     message: str,
-    topValue: getTop(),
-    leftValue: getLeft(),
-    rightValue: getRight(),
+    topValue: getRandomInt(85),
+    leftValue: getRandomInt(100),
+    rightValue: getRandomInt(50),
     colorValue: getColor()
   }
-  messageWrap.appendChild(messageDeco(messageObj)) //랜덤 값 설정하여 html에 삽입
+  messageWrap.appendChild(addStyleMessage(messageObj)) //랜덤 값 설정하여 html에 삽입
   storedArr.push(messageObj)
   localStorage.setItem('messageObjArr', JSON.stringify(storedArr))
   initOpacity() //opacity값은 node순서에 따라 지정
@@ -58,7 +63,7 @@ window.addEventListener('load', event => {
   if (localStorage.getItem('messageObjArr')) {
     storedArr = JSON.parse(localStorage.getItem('messageObjArr'))
     for (let i = 0; i < storedArr.length; i++) {
-      messageWrap.appendChild(messageDeco(storedArr[i]))
+      messageWrap.appendChild(addStyleMessage(storedArr[i]))
     }
     initOpacity()
   }
@@ -80,7 +85,7 @@ function initOpacity() {
  *
  * @param {element} element 대상 요소
  */
-function messageDeco(element) {
+function addStyleMessage(element) {
   let newLi = document.createElement('li')
   newLi.appendChild(document.createTextNode(element.message))
   if (element.leftValue > 50) {
@@ -98,28 +103,13 @@ function messageDeco(element) {
 }
 
 /**
- * 클래스명에 적용할 tailwindcss 랜덤값 설정
- *
- * @returns 정수형 랜덤값(최소, 최대)
- */
-function getTop() {
-  return getRandomInt(0, 85)
-}
-function getLeft() {
-  return getRandomInt(0, 100)
-}
-function getRight() {
-  return getRandomInt(0, 50)
-}
-
-/**
  * 클래스명에 적용할 tailwindcss 배경색 설정
  *
  * @returns 컬러 배열에서 랜덤인덱스를 통해 설정된 색상
  */
 function getColor() {
   let maxIndex = colorPalette.length - 1
-  return colorPalette[getRandomInt(0, maxIndex)]
+  return colorPalette[getRandomInt(maxIndex)]
 }
 
 //메세지 배경색 종류
@@ -145,16 +135,3 @@ const colorPalette = [
   '#42a5f5',
   '#1565c0'
 ]
-
-/**
- * 랜덤 정수형을 반환
- *
- * @param {number} min 최소값
- * @param {number} max 최대값
- * @returns 랜덤 정수값 반환(최댓값, 최솟값 포함)
- */
-function getRandomInt(min, max) {
-  const minCeiled = Math.ceil(min)
-  const maxFloored = Math.floor(max)
-  return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled)
-}

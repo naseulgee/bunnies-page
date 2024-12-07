@@ -1,0 +1,172 @@
+[
+  {
+    "name": "New Jeans",
+    "release": "Aug 1, 2022",
+    "url": "https://youtu.be/js1CtxSY38I?list=OLAK5uy_lnEFuNDiwH42yjMhiZYX8VKWzdqgQNzvA",
+    "coverFolder": "newjeans",
+    "cdImg": "1stEP.jpg",
+    "color": {
+      "bgColor": "#e5e5e5",
+      "fontColor": "#172554"
+    },
+    "musicServices": {
+      "melon": "https://www.melon.com/album/detail.htm?albumId=11011565",
+      "flo": "https://www.music-flo.com/detail/album/408826847/albumtrack",
+      "genie": "https://www.genie.co.kr/detail/albumInfo?axnm=82842800"
+    },
+    "playlist": [
+      {
+        "name": "Attention",
+        "time": "02:59"
+      },
+      {
+        "name": "Hype Boy",
+        "time": "02:58"
+      },
+      {
+        "name": "Cookie",
+        "time": "03:55"
+      },
+      {
+        "name": "Hurt",
+        "time": "02:57"
+      }
+    ]
+  },
+  {
+    "name": "OMG",
+    "release": "Jan 2, 2023",
+    "url": "https://youtu.be/_ZAgIHmHLdc?list=OLAK5uy_kHlI8J0DPIuNkOvzQ8VR6l4-S3fyW8gig",
+    "coverFolder": "omg&ditto",
+    "cdImg": "OMG.jpg",
+    "color": {
+      "bgColor": "#fee2e2",
+      "fontColor": "#172554"
+    },
+    "musicServices": {
+      "melon": "https://www.melon.com/album/detail.htm?albumId=11127145",
+      "flo": "https://www.music-flo.com/detail/album/410940180/albumtrack",
+      "genie": "https://www.genie.co.kr/detail/albumInfo?axnm=83325577"
+    },
+    "playlist": [
+      {
+        "name": "OMG",
+        "time": "3:37"
+      },
+      {
+        "name": "Ditto",
+        "time": "3:06"
+      }
+    ]
+  },
+  {
+    "name": "Get Up",
+    "release": "Jul 21, 2023",
+    "url": "https://youtu.be/Krr2u8BUtLw?list=OLAK5uy_mBRM8NMgE_F9JTRA7zKpmETOh0H1VnPe4",
+    "coverFolder": "getup",
+    "cdImg": "GetUp.webp",
+    "color": {
+      "bgColor": "#cffafe",
+      "fontColor": "#0d9488"
+    },
+    "musicServices": {
+      "melon": "https://www.melon.com/album/detail.htm?albumId=11281456",
+      "flo": "https://www.music-flo.com/detail/album/415330480/albumtrack",
+      "genie": "https://www.genie.co.kr/detail/albumInfo?axnm=84019740"
+    },
+    "playlist": [
+      {
+        "name": "New Jeans",
+        "time": "1:51"
+      },
+      {
+        "name": "Super Shy",
+        "time": "2:35"
+      },
+      {
+        "name": "ETA",
+        "time": "2:31"
+      },
+      {
+        "name": "Cool With You",
+        "time": "2:28"
+      },
+      {
+        "name": "Get Up",
+        "time": "0:36"
+      },
+      {
+        "name": "ASAP",
+        "time": "2:15"
+      }
+    ]
+  },
+  {
+    "name": "How Sweet",
+    "release": "May 24, 2024",
+    "url": "https://youtu.be/Q3K0TOvTOno?list=OLAK5uy_nmHc4tHBWW2PJyfn9nudHzJrxGCrNpNNU",
+    "coverFolder": "howSweet",
+    "cdImg": "HowSweet.webp",
+    "color": {
+      "bgColor": "#92400e",
+      "fontColor": "#fdba74"
+    },
+    "musicServices": {
+      "melon": "https://www.melon.com/album/detail.htm?albumId=11475749",
+      "flo": "https://www.music-flo.com/detail/album/425287164/albumtrack",
+      "genie": "https://www.genie.co.kr/detail/albumInfo?axnm=85075275"
+    },
+    "playlist": [
+      {
+        "name": "How Sweet",
+        "time": "3:39"
+      },
+      {
+        "name": "Bubble Gum",
+        "time": "3:20"
+      },
+      {
+        "name": "How Sweet (Instrumental)",
+        "time": "3:39"
+      },
+      {
+        "name": "Bubble Gum (Instrumental)",
+        "time": "3:20"
+      }
+    ]
+  },
+  {
+    "name": "Supernatural",
+    "release": "Jun 21, 2024",
+    "url": "https://youtu.be/ZncbtRo7RXs?list=OLAK5uy_nTIiMkdnb8rtgbm6XsgliXButKi-lDFpQ",
+    "coverFolder": "supernatural",
+    "cdImg": "Supernatural.webp",
+    "color": {
+      "bgColor": "#1c1917",
+      "fontColor": "#fdba74"
+    },
+    "musicServices": {
+      "melon": "https://www.melon.com/album/detail.htm?albumId=11514014",
+      "flo": "https://www.music-flo.com/detail/album/426178480/albumtrack",
+      "genie": "https://www.genie.co.kr/detail/albumInfo?axnm=85323248"
+    },
+    "playlist": [
+      {
+        "name": "Supernatural",
+        "time": "3:11"
+      },
+      {
+        "name": "Right Now",
+        "time": "2:41"
+      },
+      {
+        "name": "Supernatural (Instrumental)",
+        "time": "3:11"
+      },
+      {
+        "name": "Right Now (Instrumental)",
+        "time": "2:41"
+      }
+    ]
+  }
+]
