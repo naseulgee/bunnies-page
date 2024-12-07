@@ -1,5 +1,3 @@
-import * as THREE from 'three'
-import { OrbitControls } from 'Orbit'
 import albumList from '../../json/albumList.json' with { type: 'json' }
 
 // 기본 설정
@@ -21,9 +19,8 @@ window.addEventListener('resize', resize)
  * 3D 객체 초기화 함수
  */
 function init() {
-  renderer = new THREE.WebGLRenderer({ antialias: true })
+  renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true })
   renderer.setSize(size.width, size.height)
-  renderer.setClearColor(0xeeeeee, 0)
   renderTarget.appendChild(renderer.domElement)
 
   scene = new THREE.Scene()
@@ -33,7 +30,7 @@ function init() {
   camera.position.set(0, 0, 50)
   camera.lookAt(0, 0, 0)
 
-  controls = new OrbitControls(camera, renderer.domElement)
+  controls = new THREE.OrbitControls(camera, renderer.domElement)
   controls.dampingFactor = 0.05
   controls.enableDamping = true
   controls.autoRotate = true
@@ -49,7 +46,7 @@ function init() {
  * 조명 생성 함수
  */
 function initLights() {
-  ambientLight = new THREE.AmbientLight(0xffffff, 3) // 주변광 추가
+  ambientLight = new THREE.AmbientLight(0xffffff, 1) // 주변광 추가
   scene.add(ambientLight)
 }
 
