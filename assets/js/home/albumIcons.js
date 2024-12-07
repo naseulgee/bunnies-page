@@ -80,13 +80,13 @@ function setModalAlbumInfo(index) {
   document.getElementById('album-name').innerText = album.name
   document.getElementById('album-name-bar').innerText = album.name
   document.getElementById('album-img').src = cdImgFolder + album.cdImg
-  document.getElementById('album-img').closest('a').href = '/album.html?index=' + index
+  document.getElementById('album-img').closest('a').href = './album.html?index=' + index
   document.getElementById('release').innerText = album.release
   document.getElementById('playlist-wrap').innerHTML = ihtml
   document.getElementById('melon').href = album.musicServices.melon
   document.getElementById('flo').href = album.musicServices.flo
   document.getElementById('genie').href = album.musicServices.genie
-  document.getElementById('album-page').href = '/album.html?index=' + index
+  document.getElementById('album-page').href = './album.html?index=' + index
   document.getElementById('cd-hover').style.backgroundColor = album.color.bgColor
   document.getElementById('cd-hole').style.backgroundColor = album.color.bgColor
   modal.style.backgroundColor = album.color.bgColor
