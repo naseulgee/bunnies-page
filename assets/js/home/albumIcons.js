@@ -1,4 +1,4 @@
-import albumList from '/assets/json/albumList.json' with { type: 'json' }
+import albumList from '../../json/albumList.json' with { type: 'json' }
 
 //모달
 const modal = document.getElementById('modal')

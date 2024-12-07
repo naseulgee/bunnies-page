@@ -1,4 +1,4 @@
-import { getRandomInt } from '/assets/js/common/random.js'
+import { getRandomInt } from '../common/random.js'
 
 const messageBtn = document.getElementById('message')
 const messageWrap = document.getElementById('message-wrap-list')

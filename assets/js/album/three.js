@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'Orbit'
-import albumList from '/assets/json/albumList.json' with { type: 'json' }
+import albumList from '../../json/albumList.json' with { type: 'json' }
 
 // 기본 설정
 const renderTarget = document.getElementById('album-cover')

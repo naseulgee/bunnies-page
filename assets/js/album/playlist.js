@@ -1,6 +1,6 @@
-import { getRandomInt } from '/assets/js/common/random.js'
-import { render3DCover } from '/assets/js/album/three.js'
-import albumList from '/assets/json/albumList.json' with { type: 'json' }
+import { getRandomInt } from '../common/random.js'
+import { render3DCover } from '../album/three.js'
+import albumList from '../../json/albumList.json' with { type: 'json' }
 
 const playBtn = document.getElementById('playAlbum')
 const prevBtn = document.getElementById('preAlbum')

@@ -1,4 +1,4 @@
-import { getRandomInt } from '/assets/js/common/random.js'
+import { getRandomInt } from '../common/random.js'
 
 window.addEventListener('load', () => rotateCards())
 

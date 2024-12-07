@@ -1,4 +1,4 @@
-import { getRandomInt } from '/assets/js/common/random.js'
+import { getRandomInt } from '../common/random.js'
 
 const pages = document.querySelectorAll('.team-photo-page')
 const pagingBtns = document.querySelectorAll('.member-pagination div button')
